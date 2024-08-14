@@ -124,6 +124,4 @@ function playGame () {
   }
 
 }
-
-
 playGame ()
