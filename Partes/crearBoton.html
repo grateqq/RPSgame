@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botón Papel</title>
+</head>
+<body>
+
+    <!-- Botón en HTML -->
+    <button id="papelButton">Papel</button>
+
+    <script src="crearBoton.js"></script>
+</body>
+
+</html>
+
+<!-- Problemas 
+ Que se ejecute script antes de que exista. 
+  Solución 1: Mover la etiqueta <script> al final del <body>
+  Solución 2: Usar DOMContentLoaded: 
+    envolver tu código JavaScript en un evento DOMContentLoaded 
+    para asegurarte de que el código se ejecute solo después de 
+    que el DOM esté completamente cargado
+      document.addEventListener("DOMContentLoaded", function() {
+      el codigo JS
+      });
