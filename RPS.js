@@ -63,8 +63,7 @@ document.getElementById("papperButton").addEventListener("click", function() {
   // Selecciones
   playerSelection = "papper"; 
   computerSelection = getComputerChoice();
- 
-    
+     
   console.log(playerSelection);
   console.log(computerSelection);
 
@@ -92,8 +91,19 @@ document.getElementById("papperButton").addEventListener("click", function() {
   let linkscore = document.getElementById("score");
   linkscore.textContent = "Score: " + score;
 
+  //FIN DEL JUEGO
+  let linkwinner = document.getElementById("winner");
   
-
+  if (score === 5) {
+    console.log("END GAME")
+    winner = "PLAYER"
+    linkwinner.textContent = "Winner is " + winner;
+  }
+  if (score === -5) {
+    console.log("END GAME")
+    winner = "COMPUTER"
+    linkwinner.textContent = "END GAME. Winner is " + winner;
+  }
 });
 
 
