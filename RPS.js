@@ -1,5 +1,5 @@
-let score
-let winner
+let score = 0
+let result
 let playerSelection
 let computerSelection
 let round = 0
@@ -69,19 +69,31 @@ document.getElementById("papperButton").addEventListener("click", function() {
   console.log(computerSelection);
 
   // WINNER
-  winner = playRonda(playerSelection,computerSelection)
-  console.log(winner)
+  result = playRonda(playerSelection,computerSelection)
+  console.log(result)
   // posteo selecciones  y resultado
   let link = document.getElementById("rondas");  // guardo en link la etiqueta a modificar
   let textraund = document.createElement("p");
   textraund.textContent = 
     "Ronda " +round+ " Player: " + playerSelection 
     + " Computer: " + computerSelection
-    + ". "+ winner;
+    + ". "+ result;
   
   link.appendChild(textraund)
 
+  //puntaje-Contar
+  if (result === "You win") {
+    score = score +1
+  } else if (result ==="You lose") {
+    score = score -1
+  }
+
+  //puntaje post
+  let linkscore = document.getElementById("score");
+  linkscore.textContent = "Score: " + score;
+
   
+
 });
 
 
