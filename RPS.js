@@ -99,16 +99,18 @@ document.getElementById("papperButton").addEventListener("click", function() {
 
   //FIN DEL JUEGO
   let linkwinner = document.getElementById("winner");
-  
-  if (score === 5) {
+  let linkbuttons = document.getElementById("buttons")
+  if (score === 2) {
     console.log("END GAME")
     winner = "PLAYER"
     linkwinner.textContent = "Winner is " + winner;
+    linkbuttons.remove()
   }
-  if (score === -5) {
+  if (score === -2) {
     console.log("END GAME")
     winner = "COMPUTER"
     linkwinner.textContent = "END GAME. Winner is " + winner;
+    linkbuttons.remove()
   }
 });
 
@@ -150,16 +152,19 @@ document.getElementById("rockButton").addEventListener("click", function() {
 
   //FIN DEL JUEGO
   let linkwinner = document.getElementById("winner");
+  let linkbuttons = document.getElementById("buttons")
   
-  if (score === 5) {
+  if (score === 2) {
     console.log("END GAME")
     winner = "PLAYER"
     linkwinner.textContent = "Winner is " + winner;
+    linkbuttons.remove()
   }
-  if (score === -5) {
+  if (score === -2) {
     console.log("END GAME")
     winner = "COMPUTER"
     linkwinner.textContent = "END GAME. Winner is " + winner;
+    linkbuttons.remove()
   }
 });
 
@@ -201,16 +206,19 @@ document.getElementById("scissorsButton").addEventListener("click", function() {
 
   //FIN DEL JUEGO
   let linkwinner = document.getElementById("winner");
+  let linkbuttons = document.getElementById("buttons")
   
-  if (score === 5) {
+  if (score === 2) {
     console.log("END GAME")
     winner = "PLAYER"
     linkwinner.textContent = "Winner is " + winner;
+    linkbuttons.remove()
   }
-  if (score === -5) {
+  if (score === -2) {
     console.log("END GAME")
     winner = "COMPUTER"
     linkwinner.textContent = "END GAME. Winner is " + winner;
+    linkbuttons.remove()
   }
 });
 
